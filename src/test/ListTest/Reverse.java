@@ -17,10 +17,11 @@ public class Reverse {
     public static ListNode ReverseList(ListNode head) {
         if(head==null||head.next ==null)
             return head;
-        ListNode node = ReverseList(head.next);
-        head.next.next = head;
+        ListNode newN = ReverseList(head.next);//一直循环到链尾
+        head.next.next = head;//不可以使用newN指向head，因为newH一直指向链尾，
+        // 刚开始时head是4，newN是5，这里便是，5指向4，然后让4指向null，向外一层递归时head是3了，newH还是5,4指向3,3指向null。。。
         head.next = null;
-        return node;
+        return newN;
     }
 
     public static void main(String[] args) {
