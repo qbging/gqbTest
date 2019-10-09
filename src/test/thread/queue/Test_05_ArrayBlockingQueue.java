@@ -1,6 +1,13 @@
 /**
  * 并发容器 - ArrayBlockingQueue
  *  有界容器。
+ *  输出
+ *  offer method : true
+ * offer method : true
+ * offer method : true
+ * offer method : false
+ * offer method : false
+ * [value0, value1, value2]
  */
 package test.thread.queue;
 
