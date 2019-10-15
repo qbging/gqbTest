@@ -1,7 +1,8 @@
-package test;
-
+package test.test1;
 /**
- * 引用传递
+ * 值传递
+ * @author guoqb
+ *
  */
 public class ttest {
 	static class A{
