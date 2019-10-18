@@ -1,4 +1,4 @@
-package test.base;
+package test.basetest;
 
 public class TestFinally {
 

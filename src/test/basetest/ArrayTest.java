@@ -1,11 +1,10 @@
-package test.base;
+package test.basetest;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-import org.json.JSONObject;
 
 public class ArrayTest {
 	public static void main(String[] args) {
@@ -42,8 +41,6 @@ public class ArrayTest {
 		String [] aa = "1,2,3".split(",");
 		int [] bb = new int [10];
 		System.out.println(Arrays.toString(bb));
-		JSONObject jsonObject = new JSONObject();
-		System.out.println(jsonObject.isNull("d"));
 	}
 
 }

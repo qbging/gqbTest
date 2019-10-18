@@ -6,15 +6,11 @@ import java.io.InputStreamReader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.json.JSONObject;
 
 public class test {
 
 	public static void main(String[] args) {
-		JSONObject json= new JSONObject();
-		json.put("jj", (Object)null);
-		System.out.println(json);
-		System.out.println(String.format("%.2f", 4.011)); 
+		System.out.println(String.format("%.2f", 4.011));
 		System.out.println(String.format("%.2f",4.012)); 
 		System.out.println(String.format("%.2f",4.013)); 
 		System.out.println(String.format("%.2f",4.014)); 

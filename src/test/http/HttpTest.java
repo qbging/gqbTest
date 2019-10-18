@@ -10,7 +10,7 @@ import java.net.URLEncoder;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import test.test2.neibulei;
+import test.basetest.neibulei;
 
 public class HttpTest extends neibulei{
 	private  void zilei() {

@@ -1,4 +1,4 @@
-package test.base;
+package test.basetest;
 public class StaticTest {
    public static void main(String[] args) {
        staticFunction();

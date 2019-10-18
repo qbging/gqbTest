@@ -1,4 +1,4 @@
-package test.base;
+package test.basetest;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
@@ -6,8 +6,6 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 public class StringTest {
 
@@ -19,13 +17,6 @@ public class StringTest {
 		Object a = 1.1;
 		System.out.println(a.toString());
 		BigDecimal decimal = new BigDecimal(a.toString());
-		JSONArray array = new JSONArray();
-		array.put(0);
-		array.put(true);
-		array.put("sss");
-		array.put(new JSONObject().put("11", false));
-		System.out.println(array);
-		System.out.println(array.toString());
 		List<String> list = new ArrayList<String>();
 		list.add("1");
 		List<String> reList = list.subList(1, list.size());

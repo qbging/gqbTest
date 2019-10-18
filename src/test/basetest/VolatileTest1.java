@@ -1,4 +1,4 @@
-package test.base;
+package test.basetest;
 
 public class VolatileTest1 {
 	public static int count = 0;
