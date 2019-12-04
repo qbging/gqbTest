@@ -6,6 +6,13 @@ import java.util.regex.Pattern;
 public class MatchTest {
 
     public static void main(String[] args) {
+
+        //*****匹配图片格式的文件名******
+//        boolean matches = Pattern.matches("^.*(\\.)(jpg|png|bmp|gif)$", "1.JPG".toLowerCase());//true
+//        boolean matches = Pattern.matches("^.*(\\.)(jpg|png|bmp|gif)$", "1JPG".toLowerCase());//false
+        boolean matches = Pattern.matches("^.*(jpg|png|bmp|gif)$", "1JPG".toLowerCase());//true
+        System.out.println(matches);
+
         String str ="中华人民共和国，简称（中国）。";
             Matcher mat = Pattern.compile("(?<=\\（)(\\S+)(?=\\）)").matcher(str);//此处是中文输入的（）
             while(mat.find()){
