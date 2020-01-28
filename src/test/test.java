@@ -1,11 +1,23 @@
 package test;
 
+import java.io.File;
+import java.util.Calendar;
+import java.util.Date;
+
 /**
  * @author guoqb
  * @date : 2019/9/30 15:41
  */
 public class test {
     public static void main(String[] args) {
+        String location = "2019/12/bd9fab057fb04c54a20869ba39c84d2f.png";
+        String filePath = location.substring(0,location.lastIndexOf("/"));
+        String substring = location.substring(location.lastIndexOf("/"));
+        System.out.println(filePath);
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.MONTH,-1);
+        Date time = calendar.getTime();
+
         //merge后提交
         String a = "123";
         String b = "123";

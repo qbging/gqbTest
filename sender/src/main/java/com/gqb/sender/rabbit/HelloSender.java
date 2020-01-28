@@ -1,6 +1,7 @@
 package com.gqb.sender.rabbit;
 
 import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
@@ -14,7 +15,9 @@ import java.util.Date;
 public class HelloSender {
 
 	@Autowired
-	private AmqpTemplate rabbitTemplate;
+	private SenderAckConfig senderAckConfig;
+	@Autowired
+	private RabbitTemplate rabbitTemplate;
 
 	public void send(String context) {
 		if (StringUtils.isEmpty(context)){
@@ -29,6 +32,14 @@ public class HelloSender {
 			context = "hello " + new Date();
 		}
 		System.out.println("Sender DirectMessage : " + context);
+		this.rabbitTemplate.convertAndSend(DirectRabbitConfig.DIRECT_EXCHANGE,DirectRabbitConfig.DIRECT_ROUTING_KEY,context);
+	}
+
+	public void sendDirectMessageWithConfirm(String context) {
+		System.out.println("Sender DirectMessage : " + context);
+		this.rabbitTemplate.setConfirmCallback(this.senderAckConfig);
+		this.rabbitTemplate.setReturnCallback(this.senderAckConfig);
+		this.rabbitTemplate.setMandatory(true);
 		this.rabbitTemplate.convertAndSend(DirectRabbitConfig.DIRECT_EXCHANGE,DirectRabbitConfig.DIRECT_ROUTING_KEY,context);
 	}
 

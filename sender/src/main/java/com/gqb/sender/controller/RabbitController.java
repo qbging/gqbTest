@@ -21,8 +21,9 @@ public class RabbitController {
         String msg = "生产者线程："+Thread.currentThread().getName() + "+ 你发送成功了：";
 //        helloSender.send(msg);//默认交换机（）
 //        helloSender.sendDirectMessage(msg+="direct");//直连交换机
+        helloSender.sendDirectMessageWithConfirm(msg+="direct错误");//直连交换机
 //        helloSender.sendTopicMessage(msg+="topic");//Topic
-        helloSender.sendFanoutMessage(msg+="fanout");//fanout
+//        helloSender.sendFanoutMessage(msg+="fanout");//fanout
         return msg;
     }
 }
