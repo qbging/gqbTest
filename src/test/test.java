@@ -3,6 +3,8 @@ package test;
 import java.io.File;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author guoqb
@@ -10,6 +12,8 @@ import java.util.Date;
  */
 public class test {
     public static void main(String[] args) {
+        Set<Character> set = new HashSet<>();
+
         String location = "2019/12/bd9fab057fb04c54a20869ba39c84d2f.png";
         String filePath = location.substring(0,location.lastIndexOf("/"));
         String substring = location.substring(location.lastIndexOf("/"));
