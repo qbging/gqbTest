@@ -1,10 +1,7 @@
 package test;
 
 import java.io.File;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author guoqb
@@ -12,7 +9,11 @@ import java.util.Set;
  */
 public class test {
     public static void main(String[] args) {
-        Set<Character> set = new HashSet<>();
+
+        String id = "123&456";
+        String substring1 = id.substring(id.indexOf("&")+1);
+
+        Map<String,String> m4 = new HashMap();
 
         String location = "2019/12/bd9fab057fb04c54a20869ba39c84d2f.png";
         String filePath = location.substring(0,location.lastIndexOf("/"));

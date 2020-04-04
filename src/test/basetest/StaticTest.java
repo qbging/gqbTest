@@ -1,4 +1,12 @@
 package test.basetest;
+
+/**out:
+ * 2
+ * 3
+ * a=110,b=0
+ * 1
+ * 4
+ */
 public class StaticTest {
    public static void main(String[] args) {
        staticFunction();

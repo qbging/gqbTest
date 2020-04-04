@@ -1,6 +1,7 @@
 package test.list;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -22,6 +23,10 @@ public class StreamTest2 {
 //        list.forEach(o-> System.out.println(o));
         //先过滤出来大于3的，然后找最大值
         System.out.println(list.stream().filter(o->o>3).max((o1,o2)->o1-o2));
+        //倒序排
+        list = list.stream().sorted(Comparator.comparingInt(Integer::intValue).reversed()).collect(Collectors.toList());
+        //再正过来
+        list = list.stream().sorted((o1, o2) -> (o1-o2)).collect(Collectors.toList());
         //map映射生成新流
         list.stream().map(o->o+2).forEach(System.out::println);
         //map映射的新流，然后将流转换成新的形式
