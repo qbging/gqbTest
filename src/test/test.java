@@ -10,6 +10,11 @@ import java.util.*;
 public class test {
     public static void main(String[] args) {
 
+        String[] split = "/市委网信办/河北区".split("/");
+
+        Map<String,Object> map = new HashMap<>();
+        map.put("1",null);
+
         String id = "123&456";
         String substring1 = id.substring(id.indexOf("&")+1);
 

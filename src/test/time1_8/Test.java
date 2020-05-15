@@ -15,6 +15,8 @@ import java.time.temporal.TemporalField;
 public class Test {
     public static void main(String[] args) {
 
+        LocalDate parse2 = LocalDate.parse("2020-04-13 20:20:20", DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+
         LocalDateTime dateTime = LocalDateTime.now();
 
         LocalDate date = LocalDate.now();
