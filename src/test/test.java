@@ -1,8 +1,7 @@
 package test;
 
 import java.io.File;
-import java.util.Calendar;
-import java.util.Date;
+import java.util.*;
 
 /**
  * @author guoqb
@@ -10,6 +9,17 @@ import java.util.Date;
  */
 public class test {
     public static void main(String[] args) {
+
+        String[] split = "/市委网信办/河北区".split("/");
+
+        Map<String,Object> map = new HashMap<>();
+        map.put("1",null);
+
+        String id = "123&456";
+        String substring1 = id.substring(id.indexOf("&")+1);
+
+        Map<String,String> m4 = new HashMap();
+
         String location = "2019/12/bd9fab057fb04c54a20869ba39c84d2f.png";
         String filePath = location.substring(0,location.lastIndexOf("/"));
         String substring = location.substring(location.lastIndexOf("/"));
